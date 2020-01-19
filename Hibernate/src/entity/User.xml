@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--
+    用于映射UsersEntity实体类,对应数据库中users表
+-->
+<hibernate-mapping package="entity">
+    <class name="User" table="user">
+        <!--属性id,映射表里的字段id-->
+        <id name="id" column="id">
+            <!--id的自增长方式采用数据库的本地方式-->
+            <generator class="native"></generator>
+        </id>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+    </class>
+</hibernate-mapping>
